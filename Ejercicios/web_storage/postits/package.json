@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "name": "postits",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "serve ./public"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

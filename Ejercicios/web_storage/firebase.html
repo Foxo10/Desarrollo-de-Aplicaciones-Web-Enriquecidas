@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase</title>
+  <!-- Import Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+</head>
+<body>
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBj4lXrO-YlOxbAxM2AxuJmEK-mlcolg6U",
+      authDomain: "dawe-82db8.firebaseapp.com",
+      projectId: "dawe-82db8",
+      storageBucket: "dawe-82db8.appspot.com",
+      messagingSenderId: "431648993487",
+      appId: "1:431648993487:web:8ebc318e88b28057cfc7ba",
+      measurementId: "G-7J7PDJBL1J"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // Add a user to the database
+    db.collection("users").add({
+      first: "Ada",
+      last: "Lovelace",
+      born: 1815
+    })
+    .then(function(docRef) {
+      console.log(`Document written with ID: ${docRef.id}`);
+    })
+    .catch(function(error) {
+      console.log(`Error adding document. ${error}`);
+    });
+
+    // Add another user to the database
+    db.collection("users").add({
+      first: "Valentina",
+      middle: "Vladímirovna",
+      last: "Tereshkova",
+      born: 1963
+    })
+    .then(function(docRef) {
+      console.log(`Document written with ID: ${docRef.id}`);
+    })
+    .catch(function(error) {
+      console.log(`Error adding document. ${error}`);
+    });
+
+    // Show all users
+    db.collection("users").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
+      });
+    });
+  </script>
+</body>
+</html>

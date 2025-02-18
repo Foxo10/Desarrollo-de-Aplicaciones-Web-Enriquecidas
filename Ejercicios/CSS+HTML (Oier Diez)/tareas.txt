@@ -1,0 +1,5 @@
+-Dividir el proyecto en carpetas: SI
+-Tarea 1: SI
+-Tarea 2: SI
+-Tarea 3: SI
+-Tarea 4: SI

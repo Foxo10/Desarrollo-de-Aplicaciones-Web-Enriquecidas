@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Damas inglesas</title>
+<link rel="stylesheet" href="./css/styles.css"> <!-- Incluye tu archivo de estilos CSS -->
+<script src="./js/juego.js"></script>
+</head>
+<body>
+<h1>Damas inglesas</h1>
+<div id="offlineMessage" class="offlineMessage" style="display: none;">Estás offline</div>
+<p id="movimientos">Movimientos: <span id="count">0</span></p>
+<canvas id="lienzo" width="600" height="300"></canvas>
+
+<script>
+  iniciarJuego(document.getElementById('lienzo'), document.getElementById('count'));
+</script>
+
+<script>
+  // Registrar el Service Worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        
+        // Verificar el estado de la conexión cuando se registre el Service Worker
+        if (!navigator.onLine) {
+          showOfflineMessage();
+        }
+        
+        // Escuchar eventos de cambio de conexión
+        window.addEventListener('online', hideOfflineMessage);
+        window.addEventListener('offline', showOfflineMessage);
+      })
+      .catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  }
+
+  // Función para mostrar el mensaje "Estás offline"
+  function showOfflineMessage() {
+    const offlineMessage = document.getElementById('offlineMessage');
+    offlineMessage.style.display = 'block';
+  }
+
+  // Función para ocultar el mensaje "Estás offline"
+  function hideOfflineMessage() {
+    const offlineMessage = document.getElementById('offlineMessage');
+    offlineMessage.style.display = 'none';
+  }
+</script>
+</body>
+</html>

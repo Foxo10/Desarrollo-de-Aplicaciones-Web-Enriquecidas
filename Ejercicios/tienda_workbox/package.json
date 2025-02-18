@@ -1,0 +1,14 @@
+{
+  "name": "tienda_adrian",
+  "version": "1.0.0",
+  "description": "Tienda de Adrián",
+  "main": "main.js",
+  "scripts": {
+    "start": "serve ./public"
+  },
+  "author": "Adrián",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.1.2"
+  }
+}

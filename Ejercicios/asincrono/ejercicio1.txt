@@ -1,0 +1,15 @@
+function upperCaseAsync(s) {
+    return new Promise((resolve, reject) => {
+        if(s!= null) {
+            resolve(s.toUpperCase());
+        }
+        else {
+            reject("No se RECIBIDO ningún string.");
+        }
+    });
+}
+
+upperCaseAsync("adrian").then(console.log);
+upperCaseAsync(null).catch((x) => {
+	console.log("No se ha recibido ningún string.");
+});

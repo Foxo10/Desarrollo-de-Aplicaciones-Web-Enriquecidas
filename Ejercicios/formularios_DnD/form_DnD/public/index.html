@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>HTML5 Formularios y Drag & Drop</title>
+<link rel="stylesheet" type="text/css" media="all" href="css/estilos.css" />
+<script src="js/main.js"></script>
+</head>
+<body>
+
+<form id="datos_cliente" method="post" enctype="multipart/form-data">
+<fieldset>
+<legend>Datos del cliente</legend>
+
+<div>
+    <label>
+        Nombre:
+        <input type="email" name="nombre" id="nombre"
+        placeholder="Introduce tu nombre" autofocus> <br>
+        <span id="error-nombre" class="error"></span>
+    </label><br>
+    <label>
+        Teléfono:
+        <input type="tel" id="tlfn" name="tlfn" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+        placeholder="Patrón: 123-456-789"> <br>
+        <span id="error-tlfn" class="error"></span>
+    </label><br>
+    <label>
+        E-mail:
+        <input type="email" name="email" id="email"
+        placeholder="Introduce tu dirección de correo electrónico"> <br>
+        <span id="error-email" class="error"></span>
+    </label>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Libros</legend>
+
+<div>
+    <label for="libros">
+        Libros:
+        <input type="text" id="libros">
+    </label>
+    <label for="cantidad">
+        Cantidad (Máx 5):
+        <input type="number" id="cantidad" min="0" max="5" step="1" value="0" size="4">
+    </label><br>
+    <span id="error-libros" class="error"></span> <br>
+    <span id="error-cantidad" class="error"></span>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>File Upload</legend>
+
+<div>
+   <label for="fileselect">Elige los ficheros a subir:</label>
+   <input type="file" id="fileselect" name="fileselect" multiple />
+   <div id="filedrag">Arrastra aquí tus ficheros</div>
+</div>
+</fieldset>
+<input type="text" id="nombre" value="" name="nombre">
+<input type="button" id="enviar" value="Enviar"> <br>
+<span id="valido" class="valido"></span>
+</form> 
+<div id="messages"><p>Mensajes de estado</p></div>
+
+</body>
+</html>

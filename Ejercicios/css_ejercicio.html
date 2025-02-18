@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        div {
+            text-align: justify;
+            font-family: DauphinPlain;
+            margin: 0;
+            padding: 0;
+        }
+
+        .intro {
+            width: 200px;
+            margin: auto;
+        }
+
+        .caja {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            width: 300px;
+            height: 200px;
+            border: 5px solid;
+            font-size: 1.2em;
+        }
+
+        #caja1 {
+            background-color: red;
+            border-color: green;
+        }
+
+        #caja2 {
+            background-color: blue;
+            border-color: yellow;
+        }
+
+        #lipsum {
+            text-align: justify
+        }
+        #contenedor {
+            background-color: #fff; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            border: 2px solid #ccc; 
+             
+        }
+        
+    </style>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+    </style>
+
+    <style>
+        main {
+            width: 70%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding-bottom: 110px;
+        }
+        body {
+            background-image: url("https://www.newegg.com/insider/wp-content/uploads/windows_xp_bliss-wide.jpg");
+            background-repeat: repeat;
+            margin: 0;
+            padding: 0;
+            font-family: DauphinPlain;
+        }
+        header {
+            background-image: url('/images/Graphic-Design-Is-My-Passion.webp'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        section.noticias {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los artículos se envuelvan a la siguiente línea */
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        article {
+            flex: 0 0 calc(30% - 20px); /* Ajusta el ancho de los artículos según tus necesidades */
+            margin-bottom: 20px; /* Espacio entre los artículos */
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        article.noticia-destacada {
+            background: linear-gradient(to right, #4CAF50, #008CBA);
+            color: white;
+            border: 2px solid #4CAF50;
+        }
+        
+        article h2 {
+            margin-top: 0;
+        }
+        #titulo h1 {
+            margin: 0;
+            font-size: 2em;
+            font-family: "Arial", sans-serif; 
+        }
+        div {
+            text-align: justify;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            font-size: 24px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            font-family: "Times New Roman", Times, serif;
+            
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #220c55;
+            font-family: Helvetica, sans-serif;
+        }
+
+        h3 {
+            font-size: 16px;
+            text-decoration: underline;
+            color: #3b67f5;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+    </style>
+
+    <style>
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        
+    </style>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Descripción de la página" />
+        <title>Ejercicios CSS</title>
+    </head>
+
+    <body>
+        <header>
+            <div id="titulo">
+                <h1>Bienvenidos A Desarrollo De Aplicaciones Web Enriquecidas</h1>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a class="active" href="#home">Inicio</a></li>
+                <li><a href="#news">Enlace de interés</a></li>
+                <li><a href="#contact">Otro enlace de interés</a></li>
+                <li style="float: right;"><a href="#about">Contacto</a></li>
+            </ul>
+        </nav>
+        <div id="caja1" class="caja">
+            <p> Caja 1</p>
+        </div>
+        <div id="caja2" class="caja">
+            <p> Caja 2</p>
+        </div>
+
+        <p> Ejercicio 3</p>
+        <main>
+            <h1>Encabezado principal</h1>
+            <section class="noticias">
+                <article>
+                    <h2>Noticia 1</h2>
+                    <p>Contenido de la noticia 1...</p>
+                </article>
+                <article class="noticia-destacada">
+                    <h2>Noticia Destacada</h2>
+                    <p>Contenido de la noticia destacada...</p>
+                </article>
+                <div id="lipsum"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus lectus velit, ac maximus ante fermentum vel. Maecenas dolor nunc, malesuada at interdum eget, ultrices eget diam. Fusce aliquet lacus vulputate ullamcorper ullamcorper. Aliquam sollicitudin turpis at libero tristique, ut commodo nisl gravida. Pellentesque id lectus at purus elementum pharetra. Morbi risus magna, egestas at volutpat quis, elementum nec risus. Donec egestas ligula vel est consectetur imperdiet. Cras rhoncus in lorem ac mattis. Donec venenatis metus sit amet condimentum tempus. Quisque pellentesque lectus vitae pulvinar facilisis. In et venenatis erat. Nunc fringilla arcu et turpis dictum, vitae tincidunt est iaculis. Praesent luctus facilisis metus sit amet efficitur.</p><p>Quisque sagittis aliquam sollicitudin. In tincidunt vehicula sollicitudin. Nulla a dignissim tellus, ac ullamcorper enim. Donec at aliquam est. Nullam rhoncus sapien et feugiat aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam tempor libero metus, vitae congue magna posuere et. Cras accumsan feugiat risus non scelerisque. Pellentesque sodales facilisis nisi, id placerat tortor imperdiet non. Duis eget ullamcorper sapien, ac eleifend justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a sagittis metus, non dignissim metus. Nunc ligula ipsum, interdum eu arcu ac, pulvinar hendrerit libero. Integer mauris nisl, cursus ut congue eget, cursus non quam.</p><p>Suspendisse pretium, orci at accumsan pulvinar, mauris ipsum eleifend tellus, id dapibus libero neque et nulla. Sed sem urna, blandit ac purus non, dignissim mattis leo. Duis scelerisque lorem sit amet sapien ornare ultrices. Donec ut neque neque. Vivamus quis lacus et purus fringilla tristique. Sed porta in urna ut pulvinar. Phasellus a risus quis arcu feugiat ullamcorper. Vivamus consequat tellus non lorem convallis, sit amet dignissim quam feugiat. Donec in odio varius, rutrum felis auctor, fermentum tellus. Nunc diam odio, sagittis id congue eget, malesuada at ligula. Nunc diam est, ullamcorper vel aliquam nec, sollicitudin ut metus. Duis malesuada nulla semper diam interdum, eu mattis ante porttitor. Donec ac libero eu purus hendrerit pellentesque. Fusce urna neque, interdum a elit eu, rhoncus consequat dolor. Aenean dignissim sit amet diam a ultrices.</p><p>Aenean a ex sapien. Sed fermentum congue ante interdum cursus. Ut eu eros id lorem venenatis consectetur. Mauris rhoncus, dui id imperdiet congue, orci neque finibus sem, pretium venenatis nunc odio sed turpis. Morbi porta quis nulla sed iaculis. Duis feugiat maximus ante id rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed tempus ante ligula, nec eleifend sapien vestibulum non. Cras porttitor tellus neque, ut sagittis arcu feugiat eu. Nulla sit amet quam dapibus, placerat tortor et, sagittis est. Vivamus id tincidunt ex. Ut porttitor lobortis eros in tempus.</p><p>Nam ac purus lacus. Donec suscipit semper libero, a ultrices massa ultrices in. Quisque feugiat tortor non enim posuere semper. Mauris ac neque dapibus, vestibulum tortor quis, iaculis magna. Vivamus scelerisque ultrices eros ut eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut mauris mi, dictum id risus id, porttitor scelerisque mi. Maecenas in dolor diam. Proin a lectus eget mi viverra imperdiet. Donec facilisis eros eget odio bibendum, sed euismod tortor venenatis. Ut tempor pellentesque nunc, at porttitor neque. Suspendisse potenti.</p></div>
+        
+            </section>
+        </main>
+        <footer>
+            <p>Copyright</p>
+            <p>Web de prueba para DAWE</p>
+        </footer>
+    </body>
+</html>

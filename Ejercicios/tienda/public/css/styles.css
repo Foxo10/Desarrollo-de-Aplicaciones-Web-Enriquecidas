@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    transition: margin-right 0.3s;
+    margin-right: 0;
+  }
+  
+  body.carrito-activo {
+    margin-right: 200px;
+  }
+  body.carrito-activo header {
+    margin-right: 120px;
+  }
+  
+  header {
+    background-color: #333;
+    color: #333;
+    text-align: center;
+    padding: 1em;
+    background: linear-gradient(to right, #ff0000, #ffff66, #ff66b2);
+    transition: margin-right 0.3s; 
+    margin-right: 0; 
+  }
+  
+  #carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #carrito h2 {
+    border: 3px solid white;
+    padding: 60px;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #333;
+    color: white;
+  }
+  
+  .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin-right: 100px;
+  }
+  .contenedor .columna {
+    flex: 1;
+    max-width: calc(50% - 20px);
+    border: 10px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  #carrito {
+    visibility: hidden;
+    position: fixed;
+    top: 50px;
+    right: 25px; 
+    width: 130px; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+    background-color: orange;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    transition: right 0.3s;
+  }
+  
+  
+  #productosEnCarrito .producto-carrito {
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(233, 167, 45);
+    margin-bottom: 10px;
+    border-bottom: 4px solid gray;
+  }
+  
+  #productosEnCarrito div:hover {
+    background-color: black;
+  }
+  
+  #productosEnCarrito {
+    margin-top: 50px;
+  }
+  
+  .columna {
+    flex: 1;
+    max-width: 30%;
+    border: 10px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .columna:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+  }
+  
+  .columna:nth-child(1) {
+    background-color: blue;
+    color: white;
+  }
+  
+  
+  .columna:nth-child(2) {
+    background-color: green;
+    color: black;
+  }
+  
+  .columna:nth-child(3) {
+    background-color: purple;
+    color: yellow;
+  }
+  
+  .columna h2 {
+    font-style: italic;
+    font-size: 30px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .contenedor {
+      flex-direction: column;
+    }
+  
+    .columna {
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    header.carrito-activo {
+      margin-right: 100px;
+    }
+  }
