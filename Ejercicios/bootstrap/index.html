@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <title>DAWE Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Descripcion">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column bg-dark text-white min-vh-100">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Inicio</a>
+            <a class="navbar-brand" href="#">Sobre el sitio</a>
+            <a class="navbar-brand" href="#">Otro enlace</a>
+            <form class="d-flex ms-auto">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="d-flex align-items-center justify-content-center border-top border-bottom border-white py-3">
+        <h1 class="display-6">Desarrollo de Aplicaciones Web Enriquecidas Bootstrap</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container-fluid flex-grow-1 my-4">
+        <div class="row">
+            <!-- Aside Section -->
+            <aside class="col-md-3 border-end border-light">
+                <div class="bg p-3 rounded mb-4">
+                    <h2 class="h4">Últimos avisos</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-dark text-white">La luz se ha ido en la Escuela de Ingeniería Edificio I</li>
+                        <li class="list-group-item bg-dark text-white">No vamos a funcionar adecuadamente</li>
+                        <li class="list-group-item bg-dark text-white">Nos pulimos visitando la cafetería</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-center border-bottom border-light h4 pb-2">Temario</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-dark text-white">Tutorial de HTML y CSS</li>
+                        <li class="list-group-item bg-dark text-white">Programación Orientada a Objetos en JavaScript</li>
+                        <li class="list-group-item bg-dark text-white">DOM y CSS</li>
+                        <li class="list-group-item bg-dark text-white">Eventos: qué es y cómo se implementa</li>
+                        <li class="list-group-item bg-dark text-white">AJAX y promesas</li>
+                        <li class="list-group-item bg-dark text-white">Canvas en HTML5</li>
+                        <li class="list-group-item bg-dark text-white">Video y audio en HTML5</li>
+                        <li class="list-group-item bg-dark text-white">Node, Express y MongoDB</li>
+                        <li class="list-group-item bg-dark text-white">Web Storage</li>
+                    </ul>
+                </div>
+                <div class="dropdown mt-3 text-center">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Escoge evaluación
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Evaluación 1</a></li>
+                        <li><a class="dropdown-item" href="#">Evaluación 2</a></li>
+                        <li><a class="dropdown-item" href="#">Evaluación 3</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content Section -->
+            <main class="col-md-9">
+                <section class="mb-4">
+                    <h2 class="border-bottom border-light mb-3 pb-2">Noticias</h2>
+                    <article class="mb-4 p-3 border border-white rounded">
+                        <h3 class="h5">Lorem ipsum!??</h3>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat convallis justo, vel venenatis diam porta ut.</p>
+                        <footer class="text-end border-top pt-2">
+                            <small>Por Admin - 01/01/2021</small>
+                        </footer>
+                    </article>
+                    <article class="mb-4 p-3 border border-white rounded">
+                        <h3 class="h5">¡Lorem ipsum!</h3>
+                        <hr>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hendrerit vel velit.</p>
+                        <footer class="text-end border-top pt-2">
+                            <small>Por Admin - 02/01/2021</small>
+                        </footer>
+                    </article>
+                </section>
+                <section>
+                    <h2 class="border-bottom mb-3 pb-2">Más popular</h2>
+                    <article class="mb-4 p-3 border border-white rounded">
+                        <h3 class="h5">¿¿Lorem ipsum..??</h3>
+                        <hr>
+                        <p>Aliquam erat volutpat. Phasellus nec neque nec leo aliquam sollicitudin. Nam mollis est in malesuada fermentum.</p>
+                        <footer class="text-end border-top pt-2">
+                            <small>Por Admin - 03/01/2021</small>
+                        </footer>
+                    </article>
+                    <article class="mb-4 p-3 border border-white rounded">
+                        <h3 class="h5">Lorem-lorem ipsum</h3>
+                        <hr>
+                        <p>Duis ac pharetra nibh. Praesent ac erat sit amet magna varius. Vestibulum blandit venenatis arcu.</p>
+                        <footer class="text-end border-top pt-2">
+                            <small>Por Admin - 04/01/2021</small>
+                        </footer>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center mt-auto py-3">
+        <nav class="nav justify-content-center">
+            <a class="nav-link text-white" href="#">Copyright</a>
+            <a class="nav-link text-white" href="#">Mapa del sitio</a>
+            <a class="nav-link text-white" href="#">FAQ</a>
+        </nav>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
